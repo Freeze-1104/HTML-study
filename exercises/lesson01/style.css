@@ -1,0 +1,27 @@
+body {
+  background-color: #cacacb;
+}
+h1 {
+  color: #ffffff;
+  background-color: lightskyblue;
+  padding: 20px;
+  border: 10px solid white;
+  border-radius: 10px;
+}
+p {
+  color: rgb(72, 72, 72);
+  font-size: 20px;
+}
+.highlight {
+  color: white;
+  background-color: lightskyblue;
+}
+h2 {
+  background-color: lightskyblue;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  border-radius: 5px;
+}
+h2 {
+  padding: 10px;
+}
