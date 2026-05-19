@@ -105,6 +105,17 @@ img {
   margin-bottom: 24px;
   color: #eee;
 }
+
+.section-a {
+  padding: 40px;
+}
+
+.section-a h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #eee;
+}
 /* =============================================
    メンバーセクション
    =============================================
@@ -219,4 +230,12 @@ img {
 
 .about {
   background-image: url(img/about.jpg);
+}
+
+@media screen and (max-width: 767px) {
+  /* 767pxまでの幅の場合に適応される */
+  .section-a {
+    padding: 40px 150px;
+    gap: 24px;
+  }
 }
