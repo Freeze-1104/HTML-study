@@ -300,3 +300,20 @@ img {
   padding: 10px;
   font-size: 16px;
 }
+
+input[type="text"]:required,
+input[type="email"]:required,
+input[type="email"]:invalid,
+textarea:required {
+  color: #630015;
+  border-color: #c20c33;
+  background-color: #ffd9e1;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+textarea:valid {
+  color: #333;
+  border-color: #ccc;
+  background: #fff;
+}
