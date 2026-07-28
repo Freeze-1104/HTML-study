@@ -133,42 +133,124 @@
       <p>お問い合わせは teamoca@example.com までご連絡ください。</p>
     </div>
 
-    <div class="name">
-      <form action="xxx.html" method="get" name="name_form">
-        <h2>Name</h2>
-        <input type="text" name="name" minlength="1" maxlength="20" placeholder="山田 太郎" />
-      </form>
+    <div class="form">
+    <form onsubmit="return validateForm()">
+      <p>
+        <label>
+          >Name<br />
+          <input
+            type="text"
+            id="name"
+            minlength="2"
+            maxlength="20"
+            placeholder="山田 太郎"
+        /></label>
+      </p>
+      <p>
+        <label
+          >Mail<br />
+          <input type="email" id="email" minlength="1" placeholder="@example.com"
+        /></label>
+      </p>
+      <p>
+        <label
+          >Category<br />
+          <select name="item">
+            <option value="">お問い合わせ項目を選択してください</option>
+            <option value="">ご質問</option>
+            <option value="">その他</option>
+          </select>
+        </label>
+      </p>
+      <p>
+        <label
+        >お問い合わせ内容<br />
+        <textarea name="content" minlength="1" maxlength="400"></textarea>
+      </p>
+      <button type="submit">送信</button>
+    </form>
     </div>
 
-    <div class="mail">
-      <form action="xxx.html" method="get" name="mail_form">
-        <h2>Mail</h2>
-        <input type="email" name="mail" minlength="1" placeholder="@example.com" />
-      </form>
-    </div>
+    <script>
+      function validateForm() {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+      
 
-    <div class="category">
-              <h2>Category</h2>
-      <select name="item">
-        <option value="">お問い合わせ項目を選択してください</option>
-        <option value="">ご質問</option>
-        <option value="">その他</option>
-      </select>
-      </form>
-    </div>
+      let errors = [];
 
-     <div class="form">
-      <form action="xxx.html" method="get" name="mail_form">
-            <h2>お問い合わせ内容</h2>
-            <textarea name="お問い合わせ内容" minlength="1" maxlength="400"></textarea>
-            </form>
-     </div>
+      if (name.length < 4) {
+        errors.push("・名前は4文字以上で入力してください。");
+      }
 
+      if(email.includes("@")) {
+        errors.push("・正しいメールアドレスの形式で入力してください。");
+      }
 
-    <div class="send">
-      <input type="submit" value="送信" />
-    </div>
-    <!-- ============================================
+      if (errors.length > 0) {
+            alert("入力内容に不備があります。\n\n" + errors.join("\n"));
+            return false;
+      }
+
+      alert("送信が完了しました！");
+        return true;
+    }
+    </script>
+      
+
+    <form onsubmit="return validateForm()">
+        <p>
+            <label>Name<br>
+            <input type="text" id="username" minlength="2" maxlength="20" placeholder="山田 太郎"></label>
+        </p>
+        <p>
+            <label>Mail<br>
+            <input type="text" id="email" minlength="1" placeholder="@example.com"></label>
+        </p>
+        <p>
+        <label
+          >Category<br />
+          <select name="item">
+            <option value="">お問い合わせ項目を選択してください</option>
+            <option value="">ご質問</option>
+            <option value="">その他</option>
+          </select>
+        </label>
+      </p>
+      <p>
+        <label
+        >お問い合わせ内容<br />
+        <textarea name="content" minlength="1" maxlength="400"></textarea>
+      </p>
+        <button type="submit">送信</button>
+    </form>
+
+    <script>
+    function validateForm() {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+
+        let errors = [];
+
+        if (name === "") {
+            errors.push("・お名前を入力してください。");
+        }
+
+        if (!email.includes("@")) {
+            errors.push("・正しいメールアドレスを入力してください。");
+        }
+
+        if (errors.length > 0) {
+            alert("入力内容に不備があります。\n\n" + errors.join("\n"));
+            return false;
+        }
+
+        alert("送信が完了しました！");
+        return true;
+    }
+    </script>
+    
+        <!-- ============================================
        ⑥ フッター
 
        ヒント:
