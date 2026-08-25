@@ -220,7 +220,7 @@ img {
 }
 
 .header a {
-  background-color: powderblue;
+  background-color: rgb(193, 255, 255);
   transition: background-color 0.5s;
 }
 
@@ -240,57 +240,10 @@ img {
   }
 }
 
-.name {
-  text-align: left;
-  padding: 5px 800px;
-  color: #888;
-}
-
-.name h2 {
-  text-align: left;
-  font-size: 14px;
-  padding-bottom: 3px;
-}
-
-.mail {
-  text-align: left;
-  padding: 5px 800px;
-  color: #888;
-}
-
-.mail h2 {
-  text-align: left;
-  font-size: 14px;
-  padding-bottom: 3px;
-}
-
-.category {
-  text-align: left;
-  padding: 5px 800px;
-  color: #888;
-}
-
-.category h2 {
-  text-align: left;
-  font-size: 14px;
-  padding-bottom: 3px;
-}
-
-.send {
-  text-align: left;
-  padding: 10px 800px;
-}
-
 .form {
   text-align: left;
-  padding: 5px 800px;
+  /* padding: 5px 800px; */
   color: #888;
-}
-
-.form h2 {
-  text-align: left;
-  font-size: 14px;
-  padding-bottom: 5px;
 }
 
 .form textarea {
@@ -302,6 +255,7 @@ img {
 }
 
 input[type="text"]:required,
+input[type="text"]:invalid,
 input[type="email"]:required,
 input[type="email"]:invalid,
 textarea:required {
